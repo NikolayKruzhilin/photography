@@ -5,14 +5,7 @@
       "photos": [
         { "file": "portrait-01.jpg", "alt": "Портрет" },
         { "file": "portrait-02.jpg", "alt": "Портрет" },
-        { "file": "portrait-03.jpg", "alt": "Портрет" },
-        { "file": "portrait-04.jpg", "alt": "Портрет" },
-        { "file": "portrait-05.jpg", "alt": "Портрет" },
-        { "file": "portrait-06.jpg", "alt": "Портрет" },
-        { "file": "portrait-07.jpg", "alt": "Портрет" },
-        { "file": "portrait-08.jpg", "alt": "Портрет" },
-        { "file": "portrait-09.jpg", "alt": "Портрет" },
-        { "file": "portrait-10.jpg", "alt": "Портрет" }
+        { "file": "portrait-03.jpg", "alt": "Портрет" }
       ]
     },
     "events": {
@@ -20,8 +13,7 @@
       "photos": [
         { "file": "event-01.jpg", "alt": "Мероприятие" },
         { "file": "event-02.jpg", "alt": "Мероприятие" },
-        { "file": "event-03.jpg", "alt": "Мероприятие" },
-        { "file": "event-04.jpg", "alt": "Мероприятие" }
+        { "file": "event-03.jpg", "alt": "Мероприятие" }
       ]
     },
     "lovestory": {
@@ -29,8 +21,7 @@
       "photos": [
         { "file": "lovestory-01.jpg", "alt": "Лавстори" },
         { "file": "lovestory-02.jpg", "alt": "Лавстори" },
-        { "file": "lovestory-03.jpg", "alt": "Лавстори" },
-        { "file": "lovestory-04.jpg", "alt": "Лавстори" }
+        { "file": "lovestory-03.jpg", "alt": "Лавстори" }
       ]
     },
     "weddings": {
@@ -38,8 +29,7 @@
       "photos": [
         { "file": "wedding-01.jpg", "alt": "Свадьба" },
         { "file": "wedding-02.jpg", "alt": "Свадьба" },
-        { "file": "wedding-03.jpg", "alt": "Свадьба" },
-        { "file": "wedding-04.jpg", "alt": "Свадьба" }
+        { "file": "wedding-03.jpg", "alt": "Свадьба" }
       ]
     }
   }
