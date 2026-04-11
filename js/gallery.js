@@ -21,7 +21,8 @@
     grid.innerHTML = '<div class="gallery-loading">Загрузка…</div>';
 
     try {
-      const res  = await fetch(PHOTOS_JSON);
+      // Add a timestamp cache-buster so updates to photos.json work instantly
+      const res  = await fetch(`${PHOTOS_JSON}?v=${new Date().getTime()}`);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
 
