@@ -1,0 +1,111 @@
+/* ── Hero wrapper ──────────────────────────────────── */
+#hero {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 100px var(--container-padding) 80px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Subtle warm radial glow behind text */
+#hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 55%,
+      rgba(201, 169, 110, 0.05) 0%,
+      transparent 70%);
+  pointer-events: none;
+}
+
+/* Very faint grain texture */
+#hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 200px;
+  pointer-events: none;
+}
+
+/* ── Content block ─────────────────────────────────── */
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-eyebrow {
+  font-size: clamp(10px, 1.1vw, 12px);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--sp-12);
+  animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 100ms;
+}
+
+.hero-name {
+  font-size: clamp(52px, 11vw, 130px);
+  font-weight: var(--fw-light);
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  color: var(--color-text-primary);
+  margin-bottom: var(--sp-20);
+  animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 200ms;
+}
+
+.hero-tagline {
+  font-size: clamp(11px, 1.2vw, 13px);
+  font-weight: var(--fw-regular);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 350ms;
+}
+
+/* ── Scroll indicator ──────────────────────────────── */
+.hero-scroll {
+  position: absolute;
+  bottom: var(--sp-20);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-4);
+  color: var(--color-text-muted);
+  transition: color var(--t-base);
+  animation: fadeIn 1.2s ease both;
+  animation-delay: 900ms;
+  z-index: 1;
+}
+
+.hero-scroll:hover {
+  color: var(--color-accent);
+}
+
+.hero-scroll-label {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: var(--fw-medium);
+  transition: color var(--t-base);
+}
+
+.hero-scroll-line {
+  display: block;
+  width: 1px;
+  height: 44px;
+  background: linear-gradient(to bottom, currentColor, transparent);
+  animation: scrollPulse 2.4s ease-in-out infinite;
+  transform-origin: top;
+}

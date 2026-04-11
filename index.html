@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Николай Кружилин — Фотограф</title>
+  <meta name="description" content="Портфолио фотографа Николая Кружилина. Свадьбы, мероприятия, вечеринки. Москва. Искренние эмоции и живые моменты.">
+  <meta name="author" content="Николай Кружилин">
+  <meta property="og:title" content="Николай Кружилин — Фотограф">
+  <meta property="og:description" content="Свадьбы, мероприятия, вечеринки. Искренние эмоции и живые моменты.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/gallery.css">
+  <link rel="stylesheet" href="css/lightbox.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav id="nav" role="navigation" aria-label="Основная навигация">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Николай Кружилин — главная">НК</a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#gallery" id="nav-link-gallery">Работы</a></li>
+        <li><a href="#about" id="nav-link-about">Обо мне</a></li>
+        <li><a href="#contact" id="nav-link-contact">Контакты</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="hero" aria-label="Главный экран">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Фотограф</p>
+      <h1 class="hero-name">Николай<br>Кружилин</h1>
+      <p class="hero-tagline">Свадьбы&nbsp;&nbsp;·&nbsp;&nbsp;Мероприятия&nbsp;&nbsp;·&nbsp;&nbsp;Лавстори</p>
+    </div>
+    <a href="#gallery" class="hero-scroll" aria-label="Перейти к работам">
+      <span class="hero-scroll-label">Смотреть работы</span>
+      <span class="hero-scroll-line"></span>
+    </a>
+  </section>
+
+  <!-- ═══ GALLERY ═══ -->
+  <section id="gallery" aria-label="Портфолио">
+    <div class="container">
+      <div class="gallery-header">
+        <h2 class="section-title reveal">Работы</h2>
+        <div class="gallery-tabs reveal" id="gallery-tabs" role="tablist" aria-label="Категории работ">
+          <button class="tab-btn active" data-category="portraits" role="tab" aria-selected="true" id="tab-portraits">Портреты</button>
+          <button class="tab-btn" data-category="events" role="tab" aria-selected="false" id="tab-events">Мероприятия</button>
+          <button class="tab-btn" data-category="lovestory" role="tab" aria-selected="false" id="tab-lovestory">Лавстори</button>
+          <button class="tab-btn" data-category="weddings" role="tab" aria-selected="false" id="tab-weddings">Свадьбы</button>
+          <button class="tab-btn" data-category="all" role="tab" aria-selected="false" id="tab-all">Все</button>
+        </div>
+      </div>
+      <div class="gallery-grid" id="gallery-grid" role="list" aria-label="Галерея фотографий">
+        <!-- Populated by gallery.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about" aria-label="Обо мне">
+    <div class="container">
+      <div class="about-inner">
+        <h2 class="section-title reveal">Обо мне</h2>
+        <div class="about-body">
+          <div class="about-avatar-wrap reveal">
+            <img
+              class="about-avatar"
+              src="photos/avatar.jpg"
+              alt="Николай Кружилин"
+              loading="lazy"
+              onerror="this.closest('.about-avatar-wrap').style.display='none'"
+            >
+          </div>
+          <p class="about-text reveal">
+            Снимаю уже больше 10 лет. За это время понял главное: самые честные кадры рождаются сами — когда люди перестают позировать и просто живут. Я не люблю выстроенные сцены и вымученные улыбки. Мне важнее поймать взгляд мимоходом, смех невпопад, нежность без повода. Такие моменты не повторяются — и именно их я стараюсь сохранить.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact" aria-label="Контакты">
+    <div class="container">
+      <h2 class="section-title reveal">Контакты</h2>
+      <div class="contact-links">
+        <a href="https://t.me/nikkruzhilin"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="contact-btn reveal"
+           id="contact-telegram"
+           aria-label="Написать в Telegram">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M21.198 2.433a2.242 2.242 0 00-1.022.215l-16.5 6.75a2.25 2.25 0 00.126 4.238l3.696 1.236 1.27 4.098a.75.75 0 001.376.146l2.008-3.482 4.012 2.932a2.25 2.25 0 003.358-1.392l2.813-14.625a2.25 2.25 0 00-2.137-2.116z" fill="currentColor"/>
+          </svg>
+          <div class="contact-btn-text">
+            <span class="contact-service">Telegram</span>
+            <span class="contact-handle">@nikkruzhilin</span>
+          </div>
+          <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+
+        <a href="https://www.instagram.com/nikolaykruzhilin.msc"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="contact-btn reveal"
+           id="contact-instagram"
+           aria-label="Перейти в Instagram">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" fill="currentColor"/>
+          </svg>
+          <div class="contact-btn-text">
+            <span class="contact-service">Instagram</span>
+            <span class="contact-handle">@nikolaykruzhilin.msc</span>
+          </div>
+          <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer id="footer">
+    <div class="container">
+      <p class="footer-text">Николай Кружилин&nbsp;&nbsp;·&nbsp;&nbsp;<span id="footer-year"></span></p>
+    </div>
+  </footer>
+
+  <!-- ═══ LIGHTBOX ═══ -->
+  <div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-label="Просмотр фотографии" aria-hidden="true">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <button class="lightbox-prev" id="lightbox-prev" aria-label="Предыдущее фото">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <button class="lightbox-next" id="lightbox-next" aria-label="Следующее фото">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <div class="lightbox-image-wrap">
+      <img class="lightbox-img" id="lightbox-img" src="" alt="" draggable="false">
+    </div>
+    <p class="lightbox-counter" id="lightbox-counter" aria-live="polite">1 / 4</p>
+  </div>
+
+  <!-- JS -->
+  <script src="js/nav.js"></script>
+  <script src="js/lightbox.js"></script>
+  <script src="js/gallery.js"></script>
+
+</body>
+</html>

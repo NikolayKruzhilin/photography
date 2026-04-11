@@ -1,0 +1,66 @@
+/* ── About section ─────────────────────────────────── */
+#about {
+  padding: var(--sp-64) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.about-inner {
+  max-width: 720px;
+}
+
+/* ── Body row: avatar + text ───────────────────────── */
+.about-body {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-20);
+}
+
+/* ── Avatar ────────────────────────────────────────── */
+.about-avatar-wrap {
+  flex-shrink: 0;
+}
+
+.about-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  /* Warm gold ring */
+  box-shadow:
+    0 0 0 1px rgba(201, 169, 110, 0.35),
+    0 0 0 4px rgba(201, 169, 110, 0.06);
+  filter: grayscale(15%);
+  transition: filter var(--t-base), box-shadow var(--t-base);
+}
+
+.about-avatar:hover {
+  filter: grayscale(0%);
+  box-shadow:
+    0 0 0 1px rgba(201, 169, 110, 0.6),
+    0 0 0 5px rgba(201, 169, 110, 0.1);
+}
+
+/* ── Bio text ──────────────────────────────────────── */
+.about-text {
+  font-size: clamp(18px, 2.4vw, 24px);
+  font-weight: var(--fw-light);
+  line-height: 1.75;
+  color: var(--color-text-primary);
+  letter-spacing: 0.01em;
+  padding-top: 4px;
+}
+
+/* ── Responsive ────────────────────────────────────── */
+@media (max-width: 600px) {
+  .about-body {
+    flex-direction: column;
+    gap: var(--sp-12);
+  }
+
+  .about-avatar {
+    width: 88px;
+    height: 88px;
+  }
+}
+

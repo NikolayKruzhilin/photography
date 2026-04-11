@@ -1,0 +1,116 @@
+/* ── Contact section ───────────────────────────────── */
+#contact {
+  padding: var(--sp-64) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+/* ── Link cards ────────────────────────────────────── */
+.contact-links {
+  display: flex;
+  gap: var(--sp-8);
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-12);
+  padding: var(--sp-20) var(--sp-24);
+  border: 1px solid var(--color-border);
+  border-radius: var(--r-md);
+  color: var(--color-text-secondary);
+  background: var(--color-surface);
+  transition:
+    border-color var(--t-base),
+    background var(--t-base),
+    color var(--t-fast),
+    transform var(--t-base);
+  min-width: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--color-accent-dim);
+  opacity: 0;
+  transition: opacity var(--t-base);
+}
+
+.contact-btn:hover {
+  border-color: rgba(201, 169, 110, 0.4);
+  color: var(--color-text-primary);
+  transform: translateY(-2px);
+}
+
+.contact-btn:hover::before {
+  opacity: 1;
+}
+
+/* Icon */
+.contact-icon {
+  width: 26px;
+  height: 26px;
+  color: var(--color-accent);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  transition: transform var(--t-base);
+}
+
+.contact-btn:hover .contact-icon {
+  transform: scale(1.12);
+}
+
+/* Text block */
+.contact-btn-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+
+.contact-service {
+  font-size: 14px;
+  font-weight: var(--fw-medium);
+  color: var(--color-text-primary);
+  letter-spacing: 0.04em;
+}
+
+.contact-handle {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.02em;
+}
+
+/* Arrow icon */
+.contact-arrow {
+  width: 18px;
+  height: 18px;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  transition: color var(--t-fast), transform var(--t-base);
+}
+
+.contact-btn:hover .contact-arrow {
+  color: var(--color-accent);
+  transform: translate(2px, -2px);
+}
+
+/* ── Responsive ────────────────────────────────────── */
+@media (max-width: 540px) {
+  .contact-btn {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .contact-links {
+    flex-direction: column;
+  }
+}

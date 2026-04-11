@@ -1,0 +1,121 @@
+/* ── Overlay ────────────────────────────────────────── */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-lightbox);
+  background: rgba(6, 6, 6, 0.96);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--t-base);
+}
+
+.lightbox.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ── Image container ───────────────────────────────── */
+.lightbox-image-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 92vw;
+  max-height: 88vh;
+}
+
+.lightbox-img {
+  max-width: 92vw;
+  max-height: 86vh;
+  max-height: 86dvh;
+  object-fit: contain;
+  border-radius: var(--r-sm);
+  transition: opacity 200ms ease;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* ── Close button ──────────────────────────────────── */
+.lightbox-close {
+  position: absolute;
+  top: var(--sp-12);
+  right: var(--sp-12);
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  border-radius: 50%;
+  transition: color var(--t-fast), background var(--t-fast);
+}
+
+.lightbox-close:hover {
+  color: var(--color-text-primary);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.lightbox-close svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* ── Prev / next ───────────────────────────────────── */
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  border-radius: 50%;
+  transition: color var(--t-fast), background var(--t-fast), transform var(--t-fast);
+}
+
+.lightbox-prev { left: var(--sp-8); }
+.lightbox-next { right: var(--sp-8); }
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  color: var(--color-text-primary);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.lightbox-prev:hover { transform: translateY(-50%) translateX(-2px); }
+.lightbox-next:hover { transform: translateY(-50%) translateX(2px); }
+
+.lightbox-prev svg,
+.lightbox-next svg {
+  width: 26px;
+  height: 26px;
+}
+
+/* ── Counter ───────────────────────────────────────── */
+.lightbox-counter {
+  position: absolute;
+  bottom: var(--sp-12);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+/* ── Mobile tweaks ─────────────────────────────────── */
+@media (max-width: 600px) {
+  .lightbox-prev { left: var(--sp-2); }
+  .lightbox-next { right: var(--sp-2); }
+
+  .lightbox-prev,
+  .lightbox-next {
+    width: 44px;
+    height: 44px;
+  }
+}
